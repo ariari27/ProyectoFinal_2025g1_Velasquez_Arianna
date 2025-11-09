@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Noticias from "./pages/Noticias/Noticias";
 import NoticiaDetalle from "./pages/NoticiaDetalle/NoticiaDetalle.jsx";
@@ -61,6 +61,8 @@ function App() {
               }
             />
             <Route path="/noticia/:id" element={<NoticiaDetalle />} />
+
+            {/* 🚨 Redirige cualquier ruta desconocida al inicio */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
