@@ -1,10 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
-    <meta http-equiv="refresh" content="0; url=./index.html">
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex" />
+    <script>
+        (function () {
+            // NOMBRE EXACTO DE TU REPO (con / al principio, sin / al final)
+            var base = '/ProyectoFinal_2025g1_Velasquez_Arianna';
+
+            // obtiene la ruta completa solicitada, por ejemplo:
+            // /ProyectoFinal_2025g1_Velasquez_Arianna/noticias/hgvv
+            var fullPath = window.location.pathname + window.location.search + window.location.hash;
+
+            // elimina el prefix base si existe, dejando '/noticias/hgvv'
+            var path = fullPath.replace(new RegExp('^' + base), '');
+
+            // construye la URL de redirección: index.html# + ruta
+            var redirectTo = base + '/index.html#' + (path ? path : '/');
+
+            // redirige con replace (no deja historial del 404)
+            window.location.replace(redirectTo);
+        })();
+    </script>
 </head>
 
-<body></body>
+<body>
+    Redirigiendo…
+</body>
 
 </html>

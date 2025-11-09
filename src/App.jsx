@@ -17,7 +17,7 @@ function App() {
   const { user } = useAuth();
 
   return (
-    <Router>
+    <Router basename="/ProyectoFinal_2025g1_Velasquez_Arianna">
       <div className="app-container">
         <Navbar />
         <main className="main-content">
