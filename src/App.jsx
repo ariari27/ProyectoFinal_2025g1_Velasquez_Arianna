@@ -17,7 +17,7 @@ function App() {
   const { user } = useAuth();
 
   return (
-    <Router basename="/ProyectoFinal_2025g1_Velasquez_Arianna">
+    <Router >
       <div className="app-container">
         <Navbar />
         <main className="main-content">
@@ -61,7 +61,6 @@ function App() {
               }
             />
             <Route path="/noticia/:id" element={<NoticiaDetalle />} />
-
             {/* 🚨 Redirige cualquier ruta desconocida al inicio */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
