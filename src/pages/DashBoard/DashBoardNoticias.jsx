@@ -17,7 +17,7 @@ function DashboardNoticias() {
 
         if (role === "reportero") {
             // Solo mostrar noticias del reportero
-            data = data.filter((n) => n.autor === user.email);
+            data = data.filter((n) => n.autor === user.nombre);
         }
         setNoticias(data);
     };
