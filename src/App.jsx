@@ -56,11 +56,12 @@ function App() {
               path="/crear/:id"
               element={
                 <ProtectedRoute>
-                  <CrearNoticia modo="editar"/>
+                  <CrearNoticia modo="editar" />
                 </ProtectedRoute>
               }
             />
             <Route path="/noticia/:id" element={<NoticiaDetalle />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />
